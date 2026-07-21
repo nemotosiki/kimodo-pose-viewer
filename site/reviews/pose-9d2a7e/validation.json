@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "validator": "deterministic-geometry-v1",
+  "status": "pass",
+  "summary": {
+    "max_bone_length_relative_error": 0.0,
+    "bone_length_pass": true,
+    "all_required_contacts_pass": true,
+    "joint_floor_penetration_count": 0,
+    "approximate_com_inside_floor_support_polygon": true,
+    "major_proxy_self_collision_count": 0
+  },
+  "bone_lengths": [
+    {"joint":"Spine1","parent":"Hips","reference_m":0.12,"current_m":0.12,"relative_error":0.0},
+    {"joint":"Spine2","parent":"Spine1","reference_m":0.14,"current_m":0.14,"relative_error":0.0},
+    {"joint":"Chest","parent":"Spine2","reference_m":0.16,"current_m":0.16,"relative_error":0.0},
+    {"joint":"Neck1","parent":"Chest","reference_m":0.13,"current_m":0.13,"relative_error":0.0},
+    {"joint":"Neck2","parent":"Neck1","reference_m":0.07,"current_m":0.07,"relative_error":0.0},
+    {"joint":"Head","parent":"Neck2","reference_m":0.12,"current_m":0.12,"relative_error":0.0},
+    {"joint":"HeadEnd","parent":"Head","reference_m":0.14,"current_m":0.14,"relative_error":0.0},
+    {"joint":"LeftShoulder","parent":"Chest","reference_m":0.13,"current_m":0.13,"relative_error":0.0},
+    {"joint":"LeftArm","parent":"LeftShoulder","reference_m":0.14035669,"current_m":0.14035669,"relative_error":0.0},
+    {"joint":"LeftForeArm","parent":"LeftArm","reference_m":0.24020824,"current_m":0.24020824,"relative_error":0.0},
+    {"joint":"LeftHand","parent":"LeftForeArm","reference_m":0.22022716,"current_m":0.22022716,"relative_error":0.0},
+    {"joint":"RightShoulder","parent":"Chest","reference_m":0.13,"current_m":0.13,"relative_error":0.0},
+    {"joint":"RightArm","parent":"RightShoulder","reference_m":0.14035669,"current_m":0.14035669,"relative_error":0.0},
+    {"joint":"RightForeArm","parent":"RightArm","reference_m":0.24020824,"current_m":0.24020824,"relative_error":0.0},
+    {"joint":"RightHand","parent":"RightForeArm","reference_m":0.22022716,"current_m":0.22022716,"relative_error":0.0},
+    {"joint":"LeftLeg","parent":"Hips","reference_m":0.1118034,"current_m":0.1118034,"relative_error":0.0},
+    {"joint":"LeftShin","parent":"LeftLeg","reference_m":0.41012193,"current_m":0.41012193,"relative_error":0.0},
+    {"joint":"LeftFoot","parent":"LeftShin","reference_m":0.45177428,"current_m":0.45177428,"relative_error":0.0},
+    {"joint":"LeftToeBase","parent":"LeftFoot","reference_m":0.20223748,"current_m":0.20223748,"relative_error":0.0},
+    {"joint":"RightLeg","parent":"Hips","reference_m":0.1118034,"current_m":0.1118034,"relative_error":0.0},
+    {"joint":"RightShin","parent":"RightLeg","reference_m":0.41012193,"current_m":0.41012193,"relative_error":0.0},
+    {"joint":"RightFoot","parent":"RightShin","reference_m":0.45177428,"current_m":0.45177428,"relative_error":0.0},
+    {"joint":"RightToeBase","parent":"RightFoot","reference_m":0.20223748,"current_m":0.20223748,"relative_error":0.0}
+  ],
+  "joint_angles_deg": {
+    "left_knee_deg": 60.9962,
+    "right_knee_deg": 54.3076,
+    "left_elbow_deg": 128.2984,
+    "right_elbow_deg": 153.9681
+  },
+  "floor_contacts": [
+    {"id":"pelvis_bottom","surface":"floor","point":[0.0,0.0,-0.02],"signed_distance_m":0.0,"tolerance_m":0.01,"pass":true},
+    {"id":"right_knee_shell","surface":"floor","point":[0.36968168,0.0000291,0.28048624],"signed_distance_m":0.0000291,"tolerance_m":0.01,"pass":true},
+    {"id":"right_foot_bottom","surface":"floor","point":[-0.08,0.0,0.32],"signed_distance_m":0.0,"tolerance_m":0.01,"pass":true},
+    {"id":"right_toe_bottom","surface":"floor","point":[-0.21128381,-0.00009875,0.47350107],"signed_distance_m":-0.00009875,"tolerance_m":0.015,"pass":true}
+  ],
+  "body_contact": {
+    "id": "left_shin_over_right_ankle",
+    "type": "capsule_clearance",
+    "left_point": [-0.09022716,0.1361729,0.34717385],
+    "right_point": [-0.08,0.04,0.32],
+    "centerline_distance_m": 0.10046014,
+    "assumed_radius_sum_m": 0.1,
+    "clearance_m": 0.00046014,
+    "pass": true
+  },
+  "floor_joint_violations": [],
+  "approximate_center_of_mass": {
+    "xyz_m": [-0.00071067,0.3087628,0.14408696],
+    "projection_xz_m": [-0.00071067,0.14408696],
+    "support_hull_xz_m": [[-0.21128381,0.47350107],[0.0,-0.02],[0.36968168,0.28048624]],
+    "inside_support_hull": true,
+    "method": "rough segment-mass proxy; suitable only for rejecting obvious imbalance"
+  },
+  "notes": [
+    "The left lower leg is intentionally elevated over the right ankle/lower-leg region.",
+    "Capsule radii are approximate; final character mesh and clothing still require Blender-side collision review.",
+    "Hands and feet are represented by simplified end joints, not full palms/soles."
+  ]
+}
