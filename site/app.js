@@ -4,6 +4,7 @@ import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.185.0/examples
 const viewer=document.querySelector('#viewer');
 const status=document.querySelector('#status');
 const description=document.querySelector('#description');
+const poseSelect=document.querySelector('#pose-select');
 
 let rig=null;
 let names=[];
@@ -95,15 +96,17 @@ async function loadPayload(payload,label='JSON'){
   status.textContent=`${label} / ${names.length} joints / ${rig?.skeleton_name||'rig'}`;
   renderPose(pose);
 }
-async function loadSample(){const r=await fetch('./poses/happy-wave-pose.json',{cache:'no-cache'});if(!r.ok)throw new Error('サンプルJSONを読めません');await loadPayload(await r.json(),'happy-wave-pose.json')}
+async function loadNamedPose(filename){const r=await fetch(`./poses/${filename}`,{cache:'no-cache'});if(!r.ok)throw new Error(`${filename} を読めません`);await loadPayload(await r.json(),filename)}
+async function loadSelectedPose(){await loadNamedPose(poseSelect.value)}
 async function loadDefaultRig(){const r=await fetch('./skeletons/generic-humanoid.json',{cache:'no-cache'});if(!r.ok)throw new Error('既定リグJSONを読めません');installRig(await r.json(),'generic-humanoid.json')}
 
 function resize(){const w=viewer.clientWidth,h=viewer.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}
 new ResizeObserver(resize).observe(viewer);
-document.querySelector('#sample').onclick=()=>loadSample().catch(e=>status.textContent=e.message);
+document.querySelector('#sample').onclick=()=>loadSelectedPose().catch(e=>status.textContent=e.message);
+poseSelect.onchange=()=>loadSelectedPose().catch(e=>status.textContent=e.message);
 document.querySelector('#file').onchange=async e=>{try{const f=e.target.files[0];if(f)await loadPayload(JSON.parse(await f.text()),f.name)}catch(err){status.textContent=err.message}};
 document.querySelector('#rig-file').onchange=async e=>{try{const f=e.target.files[0];if(f)installRig(JSON.parse(await f.text()),f.name)}catch(err){status.textContent=err.message}};
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>fit(currentPose||neutral,b.dataset.view));
 function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera)}
 resize();animate();
-loadDefaultRig().then(loadSample).catch(e=>status.textContent=e.message);
+loadDefaultRig().then(loadSelectedPose).catch(e=>status.textContent=e.message);
