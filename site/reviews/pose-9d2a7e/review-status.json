@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "status": "provisional",
+  "mechanical_gate": "passed",
+  "anonymous_four_view": "generated",
+  "same_context_semantic_check": "passed",
+  "same_context_naturalness_check": "passed_with_warnings",
+  "independent_blind_review": "pending",
+  "publish_to_normal_pose_library": false,
+  "next_action": "匿名4視点レビューURLを、目標を知らない別コンテキストのモデルまたは人間へ渡す。回答が目標と一致し、重大な自然さ指摘がなければ review_passed へ変更する。"
+}
