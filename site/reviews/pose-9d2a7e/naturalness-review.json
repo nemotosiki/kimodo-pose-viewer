@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "reviewer": "same-model-second-pass",
+  "independent_context": false,
+  "scores": {
+    "naturalness_5": 4,
+    "support_5": 4,
+    "anatomy_5": 4,
+    "readability_5": 4
+  },
+  "critical_issues": [],
+  "warnings": [
+    "腕と上半身がやや左右対称で、演技として少し硬い",
+    "簡易棒人間では手のひらが膝へ実際に接しているかを完全には判定できない",
+    "衣装付き実モデルでは交差した下腿と靴・衣装の干渉を再確認する必要がある"
+  ],
+  "observations": [
+    "骨盤プロキシ下端は床線へ接しており、以前の腰浮きは見えない",
+    "左右の下腿は高さをずらしてあり、同一平面での完全な貫通を避けている",
+    "正面・側面・上面のいずれでも床座りとして読み取れる"
+  ],
+  "gate_effect": "informational_only",
+  "reason": "独立Reviewerではないため最終合格には使用しない"
+}
