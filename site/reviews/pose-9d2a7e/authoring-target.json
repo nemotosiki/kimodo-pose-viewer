@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "target_text": "床にあぐらで座り、上半身を少し前へ傾け、両手を左右の膝付近へ自然に置く。片方の下腿をもう片方より少し上に重ね、身体は骨盤と下側の脚で安定して支える。",
+  "posture_class": "floor_sitting",
+  "semantic_keywords": [
+    "あぐら",
+    "床に座る",
+    "脚を交差",
+    "両手を膝付近"
+  ],
+  "required_floor_support": [
+    "pelvis_bottom",
+    "right_knee_shell",
+    "right_foot_bottom"
+  ],
+  "required_body_support": [
+    "left_shin_over_right_ankle"
+  ],
+  "constraints": {
+    "preserve_bone_lengths": true,
+    "no_reversed_knees": true,
+    "no_major_floor_penetration": true,
+    "pelvis_proxy_vertical_radius_m": 0.18,
+    "asymmetry_note": "左下腿を右下腿より上へ置き、交差部の物理的な重なりを避ける"
+  }
+}
