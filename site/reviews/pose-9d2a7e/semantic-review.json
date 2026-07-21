@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "reviewer": "same-model-second-pass",
+  "independent_context": false,
+  "primary_guess": "床に脚を交差して座り、少し前かがみで両手を膝付近へ置いている",
+  "posture_class": "floor_sitting",
+  "support_points_guess": [
+    "pelvis",
+    "right lower leg / ankle area",
+    "crossed lower legs"
+  ],
+  "confidence": 90,
+  "secondary_guess": "瞑想または休憩中の床座り",
+  "semantic_match_to_target": true,
+  "gate_effect": "informational_only",
+  "reason": "Authorと同じモデル・会話コンテキストのため、独立したブラインド評価としては数えない"
+}
