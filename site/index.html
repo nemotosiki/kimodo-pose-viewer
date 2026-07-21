@@ -13,14 +13,15 @@
     <section id="viewer"></section>
     <aside>
       <button id="sample">喜んで手を振るポーズ</button>
-      <label class="file">JSONを開く<input id="file" type="file" accept=".json,application/json"></label>
+      <label class="file">ポーズJSONを開く<input id="file" type="file" accept=".json,application/json"></label>
+      <label class="file">骨格JSONを開く<input id="rig-file" type="file" accept=".json,application/json"></label>
       <div class="views">
         <button data-view="iso">斜め</button><button data-view="front">正面</button>
         <button data-view="side">側面</button><button data-view="top">上</button>
       </div>
       <p id="description"></p>
       <p id="status">読み込み中…</p>
-      <p class="hint">ドラッグで回転、ピンチまたはホイールで拡大縮小。JSONは端末内だけで処理します。</p>
+      <p class="hint">骨格JSONは kimodo_dump_skeleton_meta.py の出力をそのまま読めます。ドラッグで回転、ピンチまたはホイールで拡大縮小。JSONは端末内だけで処理します。</p>
     </aside>
   </main>
   <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js"}}</script>
