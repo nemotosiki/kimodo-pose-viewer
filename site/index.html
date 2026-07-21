@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>KiMoDo Pose Viewer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header><strong>KiMoDo Pose Viewer</strong><span>3Dポーズ確認</span></header>
+  <main>
+    <section id="viewer"></section>
+    <aside>
+      <button id="sample">喜んで手を振るポーズ</button>
+      <label class="file">JSONを開く<input id="file" type="file" accept=".json,application/json"></label>
+      <div class="views">
+        <button data-view="iso">斜め</button><button data-view="front">正面</button>
+        <button data-view="side">側面</button><button data-view="top">上</button>
+      </div>
+      <p id="description"></p>
+      <p id="status">読み込み中…</p>
+      <p class="hint">ドラッグで回転、ピンチまたはホイールで拡大縮小。JSONは端末内だけで処理します。</p>
+    </aside>
+  </main>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
