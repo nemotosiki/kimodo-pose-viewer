@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "pose_id": "pose-9d2a7e",
+  "reviewer_visibility": [
+    "pose.json",
+    "four-view review page only"
+  ],
+  "hidden_from_reviewer": [
+    "authoring-target.json",
+    "semantic keywords",
+    "descriptive filenames"
+  ],
+  "prompt": "同じ3D人型を正面・側面・上面・斜めから見たものです。説明やファイル名を手掛かりにせず身体の形だけから答えてください。1) 人物は何をしていますか。2) posture_classを standing / chair_sitting / floor_sitting / squatting / kneeling / lying から選んでください。3) どの部位で身体を支えているように見えますか。4) 第1候補、第2候補、確信度0〜100を答えてください。5) 腰の浮き、逆関節、ねじれ、貫通、重心の矛盾があれば列挙してください。"
+}
