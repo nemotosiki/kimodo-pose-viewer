@@ -1,0 +1,22 @@
+{
+  "description": "右手を上げて振り、左腕を開き、右脚を後ろへ曲げて喜んでいるポーズ",
+  "frames": [
+    {
+      "frame": 0,
+      "operations": [
+        { "op": "set_root", "position": [-0.06, 0.98, 0.0] },
+        { "op": "rotate_subtree", "joint": "Chest", "axis": [0.0, 0.0, 1.0], "degrees": 6.0 },
+        { "op": "rotate_subtree", "joint": "Chest", "axis": [0.0, 1.0, 0.0], "degrees": -8.0 },
+        { "op": "rotate_subtree", "joint": "Neck1", "axis": [0.0, 0.0, 1.0], "degrees": -7.0 },
+        { "op": "aim_bone", "joint": "RightArm", "child": "RightForeArm", "direction": [0.55, 0.78, 0.20] },
+        { "op": "aim_bone", "joint": "RightForeArm", "child": "RightHand", "direction": [-0.18, 0.96, 0.22] },
+        { "op": "aim_bone", "joint": "LeftArm", "child": "LeftForeArm", "direction": [-0.72, 0.35, 0.28] },
+        { "op": "aim_bone", "joint": "LeftForeArm", "child": "LeftHand", "direction": [-0.60, 0.55, 0.35] },
+        { "op": "aim_bone", "joint": "LeftLeg", "child": "LeftShin", "direction": [-0.10, -0.99, 0.02] },
+        { "op": "aim_bone", "joint": "LeftShin", "child": "LeftFoot", "direction": [-0.02, -0.99, 0.04] },
+        { "op": "aim_bone", "joint": "RightLeg", "child": "RightShin", "direction": [0.22, -0.90, -0.38] },
+        { "op": "aim_bone", "joint": "RightShin", "child": "RightFoot", "direction": [-0.05, -0.50, 0.86] }
+      ]
+    }
+  ]
+}
