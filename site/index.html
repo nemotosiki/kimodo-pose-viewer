@@ -12,7 +12,17 @@
   <main>
     <section id="viewer"></section>
     <aside>
-      <button id="sample">喜んで手を振るポーズ</button>
+      <label>サンプルポーズ
+        <select id="pose-select">
+          <option value="happy-wave-pose.json">手を振って喜ぶ</option>
+          <option value="joyful-cheer.json">両手を上げて喜ぶ</option>
+          <option value="floor-sit-relaxed.json">地面に座る・リラックス</option>
+          <option value="cross-legged-sit.json">あぐらで座る</option>
+          <option value="kneeling-greeting.json">片膝で挨拶</option>
+          <option value="surprised-recoil.json">驚いてのけぞる</option>
+        </select>
+      </label>
+      <button id="sample">選択したポーズを表示</button>
       <label class="file">ポーズJSONを開く<input id="file" type="file" accept=".json,application/json"></label>
       <label class="file">骨格JSONを開く<input id="rig-file" type="file" accept=".json,application/json"></label>
       <div class="views">
